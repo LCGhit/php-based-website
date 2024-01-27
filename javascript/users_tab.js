@@ -34,7 +34,6 @@ document.getElementById("makeChange").addEventListener("click", function() {
     xmlhttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200) {
             var response = this.responseText.split(" ");
-            console.log(response);
             for(i = 0; i < response.length; i++) {
                 document.getElementById("currentData").children.item(i).innerHTML = response[i];
             };
@@ -87,7 +86,6 @@ document.getElementById("makeClientChange").addEventListener("click", function()
     xmlhttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200) {
             var response = this.responseText.split(" ");
-            console.log(response);
             for(i = 0; i < response.length; i++) {
                 document.getElementById("clientCurrentData").children.item(i).innerHTML = response[i];
             };
@@ -101,5 +99,4 @@ document.getElementById("makeClientChange").addEventListener("click", function()
     document.getElementById("changeClientEmail").value = '';
     document.getElementById("changeClientPhone").value = '';
     document.getElementById("changeClientPass").value = '';
-    console.log(vc1);
 });
